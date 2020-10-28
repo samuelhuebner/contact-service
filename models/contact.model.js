@@ -23,6 +23,20 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             defaultValue: 0
         }
+    }, {
+        getterMethods: {
+            fullname() {
+                let fullName;
+                if (this.firstname) {
+                    fullName = `${this.firstname} ${this.middlename} ${this.lastname}`;
+                } else {
+                    fullName = `${this.middlename} ${this.lastname}`;
+                }
+                // removes whitespaces (adapted from: https://stackoverflow.com/questions/7635952/javascript-how-to-remove-all-extra-spacing-between-words)
+                fullName = fullName.replace(/\s+/g, ' ');
+                return fullName;
+            }
+        }
     });
 
     return contact;
