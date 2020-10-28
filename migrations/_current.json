@@ -1,0 +1,53 @@
+{
+    "tables": {
+        "contacts": {
+            "tableName": "contacts",
+            "schema": {
+                "id": {
+                    "primaryKey": true,
+                    "autoIncrement": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "firstname": {
+                    "allowNull": false,
+                    "field": "firstname",
+                    "seqType": "Sequelize.STRING"
+                },
+                "middlename": {
+                    "allowNull": true,
+                    "defaultValue": {
+                        "value": ""
+                    },
+                    "field": "middlename",
+                    "seqType": "Sequelize.STRING"
+                },
+                "lastname": {
+                    "allowNull": false,
+                    "field": "lastname",
+                    "seqType": "Sequelize.STRING"
+                },
+                "isInternal": {
+                    "allowNull": false,
+                    "defaultValue": {
+                        "value": 0
+                    },
+                    "field": "isInternal",
+                    "seqType": "Sequelize.TINYINT(1)"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "createdAt",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updatedAt",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "revision": 1
+}
