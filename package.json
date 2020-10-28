@@ -19,6 +19,15 @@
   "dependencies": {
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "lodash": "^4.17.20",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "eslint-config-whit3shark": "git+ssh://git@github.com/machinegunflows/eslint-config-private.git",
+    "sequelize-auto-migrations": "git+ssh://git@bitbucket.org/axonetiq/sequelize-auto-migrations.git#latest",
+    "sequelize-cli": "^6.2.0"
   }
 }
