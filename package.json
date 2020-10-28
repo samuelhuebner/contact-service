@@ -1,0 +1,24 @@
+{
+  "name": "contact-service",
+  "version": "0.0.1",
+  "description": "Contact-service for the call-statistics app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/machinegunflows/contact-service.git"
+  },
+  "author": "Samuel Huebner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/machinegunflows/contact-service/issues"
+  },
+  "homepage": "https://github.com/machinegunflows/contact-service#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
