@@ -22,6 +22,15 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.TINYINT(1),
             allowNull: false,
             defaultValue: 0
+        },
+        isGlobal: {
+            type: DataTypes.TINYINT(1),
+            allowNull: false,
+            defaultValue: 1
+        },
+        privateUserId: {
+            type: DataTypes.INTEGER,
+            allowNull: true
         }
     }, {
         getterMethods: {

@@ -35,19 +35,6 @@
                     "field": "isInternal",
                     "seqType": "Sequelize.TINYINT(1)"
                 },
-                "isGlobal": {
-                    "allowNull": false,
-                    "defaultValue": {
-                        "value": 1
-                    },
-                    "field": "isGlobal",
-                    "seqType": "Sequelize.TINYINT(1)"
-                },
-                "privateUserId": {
-                    "allowNull": true,
-                    "field": "privateUserId",
-                    "seqType": "Sequelize.INTEGER"
-                },
                 "createdAt": {
                     "allowNull": false,
                     "field": "createdAt",
@@ -62,5 +49,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 1
 }
