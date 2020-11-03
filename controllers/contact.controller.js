@@ -1,3 +1,5 @@
+const _ = require('lodash');
+
 const { NotFoundError } = require('../errors');
 const db = require('../models');
 const { parseNumber } = require('../utils');
@@ -32,13 +34,21 @@ class ContactController {
             // do something
         }
 
-        return db.contact.findAll({
+        const results = await db.contact.findAll({
             order: [
                 ['lastname', 'ASC'],
                 ['middlename', 'ASC'],
                 ['firstname', 'ASC']
             ]
         });
+
+        results.forEach((item, index) => {
+            const fullname = _.get(item, 'fullname');
+            results[index] = item.toJSON();
+            results[index].fullname = fullname;
+        });
+
+        return results;
     }
 }
 
