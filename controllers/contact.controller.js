@@ -32,7 +32,11 @@ class ContactController {
             // do something
         }
 
-        return db.contact.findAll();
+        return db.contact.findAll({
+            order: [
+                [db.contact, 'fullname']
+            ]
+        });
     }
 }
 
