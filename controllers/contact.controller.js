@@ -34,7 +34,9 @@ class ContactController {
 
         return db.contact.findAll({
             order: [
-                [db.contact, 'fullname']
+                ['lastname', 'ASC'],
+                ['middlename', 'ASC'],
+                ['firstname', 'ASC']
             ]
         });
     }
